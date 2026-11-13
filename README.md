@@ -6,9 +6,7 @@ TechZone is a responsive electronics store website continued from the midterm an
 
 ## Group members and contributions
 
-- **Niyalov Yerkebulan** — explain and demonstrate the product API, `Product` class, browser storage, cart, and shopping-list features.
-- **Other group members:** add each member's name and the part they are responsible for explaining before submission. The supplied files only identified Niyalov Yerkebulan.
-
+- **(SE 2526) Niyalov Yerkebulan** — only member, responsible for the whole project.
 ## Pages
 
 - `index.html` — home page and popular products
@@ -37,11 +35,6 @@ TechZone is a responsive electronics store website continued from the midterm an
 
 The API works best from a local web server rather than opening the HTML file directly. From the project folder, run:
 
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000` in a browser. An internet connection is needed for the API, Bootstrap, jQuery, and hosted product images. If the API is unavailable, the catalog displays the included demo products and an explanatory message.
 
 ## Try the final features
 
@@ -59,15 +52,6 @@ Then open `http://localhost:8000` in a browser. An internet connection is needed
 - `js/storage.js` — safe JSON reads and writes through `BrowserStore`.
 - `js/app.js` — `loadProducts()` fetches remote data; `renderProducts()`, `renderCart()`, and `renderShoppingList()` update the page; `setupCatalog()` and `setupShoppingList()` handle user actions; `validateContactForm()` checks the contact form.
 - `css/style.css` — responsive layout and component styles.
-
-## Hosting and submission links
-
-This is a static site. To publish on GitHub Pages, push this folder to the group's repository, then select **Settings → Pages → Deploy from a branch** and choose the project branch and root folder. For Netlify, import the repository, leave the build command empty, and set the publish directory to `.`.
-
-- **Published website:** add the final hosting URL here.
-- **Source repository:** add the group's repository URL here.
-
-The published URL, repository URL, and any additional group-member contributions were not present in the supplied project files, so add the group's actual details before submitting.
 
 ## Technologies
 
