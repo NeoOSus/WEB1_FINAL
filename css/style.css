@@ -1,0 +1,211 @@
+/* style.css - TechZone Store */
+
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Hero секция */
+.hero {
+    background-color: #f0f0f0;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Секции */
+.section {
+    padding: 40px 0;
+}
+
+.section-gray {
+    background-color: #f9f9f9;
+}
+
+/* Flexbox - блоки преимуществ */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.feature-box {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.feature-box h3 {
+    margin-top: 10px;
+    color: #0d6efd;
+}
+
+/* Карточка товара с позиционированием */
+.product-card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.product-card img {
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+}
+
+.product-card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* Positioning - бейдж скидки */
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545;
+    color: white;
+    padding: 3px 10px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+/* CSS Grid - галерея */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Таблица */
+#comparison-table {
+    margin-top: 30px;
+}
+
+/* Форма */
+#contact-form {
+    max-width: 600px;
+}
+
+.field-error {
+    display: block;
+    min-height: 1.25rem;
+    color: #b02a37;
+}
+
+.product-category {
+    color: #6c757d;
+    font-size: .9rem;
+    margin-bottom: .25rem;
+}
+
+.dashboard-card {
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    background: #fff;
+}
+
+.dashboard-card span, .dashboard-card strong { display: block; }
+.dashboard-card span { color: #6c757d; font-size: .9rem; }
+.dashboard-card strong { margin-top: .35rem; color: #0d6efd; font-size: 1.35rem; }
+.shopping-panel, .cart-panel { padding: 1rem; border: 1px solid #dee2e6; border-radius: .5rem; background: #fff; }
+.shopping-quantity { width: 5rem; }
+.shopping-item-name { min-width: 10rem; flex: 1; }
+.dark-theme .dashboard-card, .dark-theme .shopping-panel { background-color: #292f38; color: #f1f3f5; border-color: #495057; }
+
+.cart-updated { animation: cart-pulse .35s ease-in-out; }
+@keyframes cart-pulse { 50% { transform: scale(1.04); } }
+
+.dark-theme { background: #171a1f; color: #f1f3f5; }
+.dark-theme .section-gray, .dark-theme .hero { background: #222831; }
+.dark-theme .product-card, .dark-theme .feature-box, .dark-theme .cart-panel,
+.dark-theme .list-group-item, .dark-theme .form-control, .dark-theme .form-select {
+    background-color: #292f38;
+    color: #f1f3f5;
+    border-color: #495057;
+}
+.dark-theme .form-control::placeholder { color: #adb5bd; }
+.dark-theme .hero p, .dark-theme .text-muted { color: #ced4da !important; }
+.dark-theme .table { color: #f1f3f5; }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #aaa;
+}
+
+/* Media query - планшет */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* Media query - мобильный */
+@media (max-width: 576px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+}
